@@ -105,7 +105,7 @@
 		    
         //Positron basemap
         var CartoDB_PositronNoLabels = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://carto.com/attributions">Carto</a>',
             subdomains: 'abcd',
             maxZoom: 19
         });
@@ -144,7 +144,7 @@
 		
 		//Adding layer of labels	
 		var labelLayer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png', {
-            "attribution": '&copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+            "attribution": '&copy; <a href="http://carto.com/attributions">Carto</a>',
             "maxzoom": 17,
         	"minzoom": 13, 
             "pane":"markerPane"}).addTo(map);
@@ -490,7 +490,7 @@
     //Sending the data
       $.ajax({
         type: 'POST',
-        url: 'https://'+config.cartoDBusername+'.cartodb.com/api/v2/sql',
+        url: 'https://'+config.cartoDBusername+'.carto.com/api/v2/sql',
         crossDomain: true,
         data: {"q":sql},
         dataType: 'json',
